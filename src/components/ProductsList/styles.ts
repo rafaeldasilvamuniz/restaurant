@@ -19,8 +19,9 @@ export const List = styled.ul`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   margin-top: 80px;
+  padding: 12px 0;
 
-  @media (max-width: ${breakpoints.desktop} or min-width: ${breakpoints.celular}) {
+  @media (max-width: ${breakpoints.desktop} and min-width: ${breakpoints.celular}) {
     margin-left: 0;
     display: block;
     justify-content: center;

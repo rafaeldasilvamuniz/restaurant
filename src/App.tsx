@@ -8,8 +8,9 @@ import Rotas from './routes'
 //import Footer from './components/Footer'
 import { store } from './store'
 import Footer from './components/Footer'
+//import Cart from './store/reducers/cart'
 //import Banner from './components/Banner'
-//import Cart from './components/Cart'
+import Cart from './components/Cart'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </div>
         <Rotas />
         <Footer />
+        <Cart />
       </BrowserRouter>
     </Provider>
   )
