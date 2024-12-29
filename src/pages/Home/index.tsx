@@ -8,7 +8,7 @@ const promocoes: Massa[] = [
   {
     id: 1,
     description:
-      'A clássica Real com Espinafre: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+      'A clássica Real com Espinafre: Espinafre com mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Real com Espinafre',
     infos: ['10%', 'R$ 65,00'],
     image: pizza,

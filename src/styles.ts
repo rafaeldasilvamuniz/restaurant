@@ -12,18 +12,18 @@ export const cores = {
 
 export const breakpoints = {
   desktop: '1024px',
-  tablet: '768px',
+  tablet: '640px',
   celular: '480px',
   telagrande: '1200px',
   tv: '1920px 1080px'
 }
 
 export const GlobalCss = createGlobalStyle`
-
-    @media (max-width: ${breakpoints.desktop}) {
-      max-width: 80%;
+@media screen and (max-width: ${breakpoints.desktop}) {
+      margin: 0 auto;
+      display: block;
+      max-width: 70%;
     }
-
 `
 /*
 * {

@@ -16,17 +16,75 @@ export const Container = styled.section<Omit<Props, 'title' | 'massas'>>`
 
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 20px;
-  margin-top: 80px;
-  padding: 12px 0;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
+  margin-top: 40px;
+  column-gap: 10px;
+  padding: 6px 0;
+`
 
-  @media (max-width: ${breakpoints.desktop} and min-width: ${breakpoints.celular}) {
-    margin-left: 0;
+/*
+ column-gap: 10px;
+  margin-top: 40px;
+  padding: 10px 0;
+
+@media screen and (max-width: ${breakpoints.tablet}{
+    margin: 0 auto;
     display: block;
     justify-content: center;
+    max-width: 50%;
   }
-`
+  */
+
+/*@media screen and (max-width: ${breakpoints.tablet} ) {
+
+  max-width: 80%;
+  display: block;
+}*/
+
+/*@media screen and (max-width: 1023px) {
+
+  table,#area-principal,#tabela,#nomeprod,#corpo,#carousel-exemplo,#area-logo,#area-cabecalho{
+
+      width: 80%;
+
+  }
+
+}*/
+
+/*@media screen and (max-width: 640px) {
+
+table,#area-principal,#tabela,#nomeprod,#corpo,#carousel-exemplo,#area-logo,#area-cabecalho
+
+{
+
+      max-width: 80%;
+
+      display: block;
+
+      margin: 0 auto;
+
+  }
+
+
+  #area-postagens {
+
+      width: 100%;
+
+      float: none;
+
+  }
+
+
+
+  #area-lateral {
+
+      width: 100%;
+
+      float: none;
+
+  }
+
+}*/
 
 /*display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

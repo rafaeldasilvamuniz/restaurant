@@ -3,12 +3,13 @@ import Massa from '../../models/Massa'
 import pizza from '../../assets/images/pizza.png'
 import Button from '../../components/Button'
 import { title } from 'process'
+import Banner from '../../components/Banner'
 
 const promocoes: Massa[] = [
   {
     id: 1,
     description:
-      'A clássica Real com Espinafre: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+      'A clássica Real com Espinafre: Espinafre com mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Real com Espinafre',
     infos: ['10%', 'R$ 65,00'],
     image: pizza,
@@ -156,10 +157,9 @@ const emBreve: Massa[] = [
 
 const Categories = () => (
   <>
-    <ProductsList massas={promocoes} title="RPG" background="white" />
-    <ProductsList massas={emBreve} title="Ação" background="black" />
-    <ProductsList massas={promocoes} title="Aventura" background="white" />
-    <ProductsList massas={emBreve} title="FPS" background="black" />
+    <Banner />
+    <ProductsList massas={promocoes} title="Promoções" background="white" />
+    <ProductsList massas={emBreve} title="Tradicionais" background="white" />
   </>
 )
 
