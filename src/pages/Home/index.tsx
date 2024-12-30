@@ -3,6 +3,30 @@ import ProductsList from '../../components/ProductsList'
 import Massa from '../../models/Massa'
 import Button from '../../components/Button'
 import pizza from '../../assets/images/pizza.png'
+import { add, open } from '../../store/reducers/cart'
+import { useDispatch } from 'react-redux'
+
+type Props = {
+  game: Game
+}
+
+const addToCart = () => {
+  const addCart = ({ game }: Props) => {
+    const dispatch = useDispatch()
+
+    dispatch(add(game))
+    dispatch(open())
+  }
+}
+
+/*const addToCart = () => {
+  const addCart = ({ game }: Props) => {
+    const dispatch = useDispatch()
+
+    dispatch(add(game))
+    dispatch(open())
+  }
+}*/
 
 const promocoes: Massa[] = [
   {
@@ -16,7 +40,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -34,7 +58,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -52,7 +76,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -70,7 +94,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -91,7 +115,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -109,7 +133,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -127,7 +151,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -145,7 +169,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -163,6 +187,3 @@ const Home = () => (
 )
 
 export default Home
-function addToCart(): void {
-  throw new Error('Function not implemented.')
-}

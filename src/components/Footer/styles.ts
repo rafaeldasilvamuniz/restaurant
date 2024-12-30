@@ -5,6 +5,13 @@ export const Container = styled.footer`
   background-color: ${cores.fundo};
   padding: 32px 0;
   font-size: 14px;
+
+  @media (max-width: ${breakpoints.celular}) {
+    grid-template-columns: 1fr;
+    display: block;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
 `
 
 export const SectionTitle = styled.h4`
@@ -90,12 +97,49 @@ export const Texto = styled.p`
   font-weight: bold;
   display: flex;
   color: ${cores.salmao};
+`
 
-  @media (max-width: ${breakpoints.tablet}) {
+export const Divtxt = styled.div`
+  color: ${cores.salmao};
+  width: 480px;
+  height: 24px;
+  text-align: center;
+  margin-left: 37%;
+  justify-content: center;
+
+  @media (max-width: ${breakpoints.celular}) {
+    grid-template-columns: 1fr;
+    display: block;
+    text-align: center;
+  }
+`
+
+/*@media screen and (max-width: ${breakpoints.celular}) {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: ${breakpoints.tablet}) {
     margin-left: 50%;
     display: flex;
   }
-`
+
+*/
+
+/*export const GlobalCss = createGlobalStyle`
+@media screen and (max-width: ${breakpoints.desktop}) {
+     grid-template-columns: 1fr 1fr;
+}
+`*/
+
+/*@media screen and (max-width: 768px)
+ { grid-template-columns: 1fr 1fr;
+
+ }
+ @media screen and (max-width: 480px)
+
+{ grid-template-columns: 1fr;
+
+}*/
 
 /*
  width: 480px;

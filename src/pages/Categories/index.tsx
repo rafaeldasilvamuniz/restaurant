@@ -2,8 +2,38 @@ import ProductsList from '../../components/ProductsList'
 import Massa from '../../models/Massa'
 import pizza from '../../assets/images/pizza.png'
 import Button from '../../components/Button'
-import { title } from 'process'
+//import { title } from 'process'
 import Banner from '../../components/Banner'
+import { add, open } from '../../store/reducers/cart'
+import { useDispatch } from 'react-redux'
+import { parseToBrl } from '../../utils'
+
+type Props = {
+  game: Game
+}
+
+/*const dispatch = useDispatch();
+
+function addToCart({game}:Props){
+        dispatch(add(game));
+        return dispatch(open())
+}*/
+
+/*const Hero = ({ game }: Props) => {
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(game))
+    dispatch(open())
+  }*/
+const addToCart = () => {
+  const addCart = ({ game }: Props) => {
+    const dispatch = useDispatch()
+
+    dispatch(add(game))
+    dispatch(open())
+  }
+}
 
 const promocoes: Massa[] = [
   {
@@ -17,7 +47,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -35,7 +65,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -53,7 +83,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -71,7 +101,7 @@ const promocoes: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -92,7 +122,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -110,7 +140,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -128,7 +158,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -146,7 +176,7 @@ const emBreve: Massa[] = [
       <Button
         type="button"
         title="Clique para adicionar a pizza"
-        to="/carrinho"
+        //variant="primary"
         onClick={addToCart}
       >
         Adicionar
@@ -155,15 +185,14 @@ const emBreve: Massa[] = [
   }
 ]
 
-const Categories = () => (
-  <>
-    <Banner />
-    <ProductsList massas={promocoes} title="Promoções" background="white" />
-    <ProductsList massas={emBreve} title="Tradicionais" background="white" />
-  </>
-)
+function Categories() {
+  return (
+    <>
+      <Banner />
+      <ProductsList massas={promocoes} title="Promoções" background="white" />
+      <ProductsList massas={emBreve} title="Tradicionais" background="white" />
+    </>
+  )
+}
 
 export default Categories
-function addToCart(): void {
-  throw new Error('Function not implemented.')
-}

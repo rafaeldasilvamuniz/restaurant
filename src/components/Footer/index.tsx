@@ -1,4 +1,4 @@
-import { Container, FooterSection, Texto } from './styles'
+import { Container, FooterSection, Texto, Divtxt } from './styles'
 import { Imagem, ImgRedes } from './styles'
 import logo from '../../assets/images/logo.png'
 import redes from '../../assets/images/redes.png'
@@ -24,15 +24,23 @@ const Footer = () => (
     <br />
     <br />
     <div className="container">
-      <FooterSection>
+      <Divtxt>
+        A efood é uma plataforma para divulgação de estabelecimentos, a
+        responsabilidade pela entrega, qualidade dos produtos é toda do
+        estabelecimento contratado.
+      </Divtxt>
+    </div>
+  </Container>
+)
+
+export default Footer
+
+/*
+<FooterSection>
         <Texto>
           A efood é uma plataforma para divulgação de estabelecimentos, a
           responsabilidade pela entrega, qualidade dos produtos é toda do
           estabelecimento contratado.
         </Texto>
       </FooterSection>
-    </div>
-  </Container>
-)
-
-export default Footer
+      */

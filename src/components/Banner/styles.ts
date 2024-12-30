@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { TagContainer } from '../Tag/styles'
+import { breakpoints } from '../../styles'
 
 export const Imagem = styled.div`
-  width: 100%;
   height: 560px;
   display: block;
   background-repeat: no-repeat;
@@ -21,7 +21,27 @@ export const Imagem = styled.div`
     position: absolute;
     top: 32px;
   }
+
+  @media screen and (max-width: ${breakpoints.celular}) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
+
+/*export const GlobalCss = createGlobalStyle`
+@media screen and (max-width: ${breakpoints.desktop}) {
+     grid-template-columns: 1fr 1fr;
+}
+`*/
+
+/*@media screen and (max-width: 768px)
+ { grid-template-columns: 1fr 1fr;
+
+ }
+ @media screen and (max-width: 480px)
+
+{ grid-template-columns: 1fr;
+
+}*/
 
 export const Titulo = styled.h2`
   font-size: 36px;

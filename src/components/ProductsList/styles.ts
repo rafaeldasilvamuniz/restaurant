@@ -16,12 +16,13 @@ export const Container = styled.section<Omit<Props, 'title' | 'massas'>>`
 
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin-top: 40px;
   column-gap: 10px;
   padding: 6px 0;
 `
 
+//grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
 /*
  column-gap: 10px;
   margin-top: 40px;

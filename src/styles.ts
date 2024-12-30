@@ -12,7 +12,7 @@ export const cores = {
 
 export const breakpoints = {
   desktop: '1024px',
-  tablet: '640px',
+  tablet: '768px',
   celular: '480px',
   telagrande: '1200px',
   tv: '1920px 1080px'
@@ -20,11 +20,26 @@ export const breakpoints = {
 
 export const GlobalCss = createGlobalStyle`
 @media screen and (max-width: ${breakpoints.desktop}) {
-      margin: 0 auto;
+     grid-template-columns: 1fr 1fr;
+}
+`
+
+/*
+margin: 0 auto;
       display: block;
       max-width: 70%;
-    }
-`
+*/
+
+/*@media screen and (max-width: 768px)
+ { grid-template-columns: 1fr 1fr;
+
+ }
+ @media screen and (max-width: 480px)
+
+{ grid-template-columns: 1fr;
+
+}*/
+
 /*
 * {
     margin: 0;
