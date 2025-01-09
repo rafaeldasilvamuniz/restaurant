@@ -5,7 +5,7 @@ export const parseToBrl = (amount = 0) => {
   }).format(amount)
 }
 
-export const getTotalPrice = (items: Game[]) => {
+export const getTotalPrice = (items: Pasta[]) => {
   return items.reduce((accumulator, currentItem) => {
     if (currentItem.prices.current) {
       return (accumulator += currentItem.prices.current)

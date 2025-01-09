@@ -3,7 +3,7 @@ declare interface GalleryItem {
   url: string
 }
 
-declare type Game = {
+declare type Pasta = {
   id: number
   name: string
   description: string

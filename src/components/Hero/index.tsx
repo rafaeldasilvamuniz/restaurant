@@ -8,7 +8,7 @@ import { add, open } from '../../store/reducers/cart'
 import { parseToBrl } from '../../utils'
 
 type Props = {
-  game: Game
+  game: Pasta
 }
 
 const Hero = ({ game }: Props) => {

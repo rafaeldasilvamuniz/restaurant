@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 type CartState = {
-  items: Game[]
+  items: Pasta[]
   isOpen: boolean
 }
 
@@ -14,7 +14,7 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    add: (state, action: PayloadAction<Game>) => {
+    add: (state, action: PayloadAction<Pasta>) => {
       const game = state.items.find((item) => item.id === action.payload.id)
 
       if (!game) {

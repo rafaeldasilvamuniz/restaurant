@@ -7,14 +7,13 @@ import { add, open } from '../../store/reducers/cart'
 import { useDispatch } from 'react-redux'
 
 type Props = {
-  game: Game
+  pasta: Pasta
 }
 
 const addToCart = () => {
-  const addCart = ({ game }: Props) => {
+  const addCart = ({ pasta }: Props) => {
     const dispatch = useDispatch()
-
-    dispatch(add(game))
+    dispatch(add(pasta))
     dispatch(open())
   }
 }

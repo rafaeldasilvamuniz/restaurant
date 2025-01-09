@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux'
 import { parseToBrl } from '../../utils'
 
 type Props = {
-  game: Game
+  pasta: Pasta
 }
 
 /*const dispatch = useDispatch();
@@ -27,10 +27,9 @@ function addToCart({game}:Props){
     dispatch(open())
   }*/
 const addToCart = () => {
-  const addCart = ({ game }: Props) => {
+  const addCart = ({ pasta }: Props) => {
     const dispatch = useDispatch()
-
-    dispatch(add(game))
+    dispatch(add(pasta))
     dispatch(open())
   }
 }

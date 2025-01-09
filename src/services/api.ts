@@ -43,13 +43,13 @@ const api = createApi({
     baseUrl: 'https://fake-api-tau.vercel.app/api/efood/checkout'
   }),
   endpoints: (builder) => ({
-    getFeaturedGame: builder.query<Game, void>({
+    getFeaturedGame: builder.query<Pasta, void>({
       query: () => 'promocoes'
     }),
-    getOnSale: builder.query<Game[], void>({
+    getOnSale: builder.query<Pasta[], void>({
       query: () => 'em-breve'
     }),
-    getGame: builder.query<Game, string>({
+    getGame: builder.query<Pasta, string>({
       query: (id) => `pizzas/${id}`
     }),
     purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
